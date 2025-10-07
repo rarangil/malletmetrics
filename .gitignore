@@ -20,6 +20,4 @@ venv/
 # macOS
 .DS_Store
 
-# Figures / large files (optional if you want to ignore them)
-# figures/
 

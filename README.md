@@ -1,97 +1,119 @@
-🎵 MalletMetrics
+# 🎵 MalletMetrics
 
-MalletMetrics is an AI-assisted marimba performance assessment tool. It 
-analyzes marimba performances for accuracy, timing, and expressive 
-features, providing feedback for learners and educators.
+**MalletMetrics** is a multimodal AI system designed for **evaluating 
+marimba performance**.  
+It integrates **automatic transcription, expressive feature modeling, and 
+GPT-based feedback** to help musicians understand and improve their 
+performances.
 
-Features
+---
 
-Automatic note transcription from audio recordings
+## Features
 
-Performance accuracy scoring against reference pieces
+- **Automatic Performance Assessment**: Compare student performances to 
+reference recordings.
+- **Expressive Feature Analysis**: Analyze dynamics, timing, and 
+articulation.
+- **Visual Feedback**: Graphical representations of performance metrics.
+- **Audio-to-Score Alignment**: Accurate transcription of marimba 
+recordings.
+- **Clustering & Comparison**: Identify trends across multiple 
+performances.
 
-Expressive feature modeling (dynamics, timing, rhythm)
+## Installation
 
-Optional AI-generated performance feedback
+Clone the repository:
 
-Visualizations of alignment, clustering, and error metrics
-
-Project Structure
-
-MalletMetrics/
-
-notebooks/ – Main Colab notebook
-
-MalletMetrics.ipynb
-
-src/ – Optional Python scripts
-
-malletmetrics.py
-
-figures/ – Sample plots & visualizations
-
-system_overview.png
-
-system_vs_expert.png
-
-knn_regression.png
-
-alignment_and_fix.png
-
-requirements.txt – Python dependencies
-
-.gitignore
-
-LICENSE
-
-README.md
-
-Getting Started
-
-1. Clone the repository
-git clone https://github.com/YOURUSERNAME/MalletMetrics.git
+git clone https://github.com/rarangil/MalletMetrics.git
 cd MalletMetrics
 
-2. Install dependencies
+Create a virtual environment (optional but recommended):
+
+python -m venv venv
+Activate the virtual environment:
+
+macOS/Linux
+source venv/bin/activate
+
+Windows
+venv\Scripts\activate
+
+
+Install dependencies:
+
 pip install -r requirements.txt
 
-3. Set up your OpenAI API key
-Create a .env file in the root folder:
+## Usage
 
-OPENAI_API_KEY=your_api_key_here
+### Set up OpenAI API Key
+
+Create a `.env` file in the root folder:
+
+OPENAI_API_KEY=your_openai_api_key_here
+
+Load the key securely in Python:
+
+import os
+from openai import OpenAI
+from dotenv import load_dotenv
+
+load_dotenv()
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+
+### Run the Notebook
+
+jupyter notebook notebooks/MalletMetrics.ipynb
 
 
-The .env file is ignored by Git and keeps your key secure.
+## Figures
 
-4. Run the notebook
-Open the notebook in Jupyter:
-notebooks/MalletMetrics.ipynb
+| Alignment & Fix | Expert vs System |
+|-----------------|----------------|
+| ![Alignment](figures/alignment_and_fix.png) | ![Expert vs 
+System](figures/expert_vs_system.png) |
 
-Or upload it to Colab and run directly.
+| KNN Regression | System Overview |
+|----------------|----------------|
+| ![KNN Regression](figures/knn_regression.png) | ![System 
+Overview](figures/system_overview.png) |
 
-Sample Visuals
-## Visualizations
 
-### System Overview
-![System Overview](figures/system_overview.png)
+## Project Structure
 
-### Expert vs. System Comparison
-![Expert vs System](figures/expert_vs_system.png)
+MalletMetrics/
+├── notebooks/ # Main Jupyter notebook
+├── src/ # Optional exported Python scripts
+├── figures/ # Sample visualizations
+├── requirements.txt
+├── .gitignore
+├── LICENSE
+└── README
 
-### KNN Regression
-![KNN Regression](figures/knn_regression.png)
+## License
 
-### Alignment & Fix Example
-![Alignment & Fix](figures/alignment_and_fix.png)
+**MalletMetrics License (Research & Educational Use Only)**
 
-License
+Copyright (c) 2025 Rohit Arangil
 
-This project is licensed under the MIT License. See LICENSE for details.
+Permission is granted for **educational, research, and non-commercial use 
+only**.  
+Commercial use or distribution is **prohibited without explicit 
+permission**.  
+All patent rights are **reserved by the copyright holder**.  
 
-Acknowledgments
+See the full [LICENSE](LICENSE) file for details.
 
-OpenAI GPT for performance feedback modeling
+## Citation / Acknowledgment
 
-Parangonar, Partitura, and PrettyMIDI for symbolic music analysis
+If you use MalletMetrics in your research or projects, please cite it as:
 
-Inspiration from marimba pedagogy and music technology research
+Rohit Arangil, MalletMetrics (2025). Multimodal AI system for marimba 
+performance evaluation.
+
+
+## Contact
+
+Rohit Arangil — [GitHub](https://github.com/rarangil)  
+
+Questions, collaborations, or license inquiries can be sent via GitHub 
+Issues or email.
