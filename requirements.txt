@@ -1,0 +1,16 @@
+torch
+torchaudio
+librosa
+soundfile
+numpy
+scipy
+matplotlib
+scikit-learn
+parangonar
+partitura
+mido
+pretty_midi
+openai
+python-dotenv
+pandas
+tqdm

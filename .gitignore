@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment files
+.env
+venv/
+*.egg-info/
+
+# Audio / media
+*.wav
+*.mp3
+*.mid
+
+# macOS
+.DS_Store
+
+# Figures / large files (optional if you want to ignore them)
+# figures/
+
